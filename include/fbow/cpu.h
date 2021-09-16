@@ -36,7 +36,9 @@ THE SOFTWARE.
 #else
 #if defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86)
 #   if _WIN32
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
 #include <Windows.h>
 #include <intrin.h>
 #   elif defined(__GNUC__) || defined(__clang__)
